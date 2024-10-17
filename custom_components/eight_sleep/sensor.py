@@ -83,7 +83,7 @@ EIGHT_USER_SENSORS = [
     "current_hrv",
     "current_breath_rate",
     "bed_temperature",
-    "target_temperature",
+    "target_heating_temp",
     "sleep_stage",
     "next_alarm",
     "bed_state_type",
@@ -326,8 +326,6 @@ class EightUserSensor(EightSleepBaseEntity, SensorEntity):
             return self._user_obj.current_bed_temp
         if self._sensor == "sleep_stage":
             return self._user_obj.current_sleep_stage
-        if self._sensor == "target_temperature":
-            return self._user_obj.target_heating_temp
 
         return None
 
